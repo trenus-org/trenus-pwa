@@ -13,6 +13,9 @@ const nextConfig = {
     disable: !isProd,
     dest: "public",
   },
+  experimental: {
+    forceSwcTransforms: true,
+  },
 }
 
 module.exports = withBundlerAnalizer(withPWA(nextConfig));
