@@ -34,3 +34,30 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Criacao do Projeto
+
+# Criar o projeto com o comando
+
+npx create-next-app@latest
+
+# Iniciar o Eslint
+
+yarn add -D eslint
+npx eslint --init
+
+# Adicionar eslint-plugin-react-hooks
+
+yarn add -D eslint-plugin-react-hooks
+
+# Adicionar eslint prettier
+
+yarn add -D eslint-plugin-prettier eslint-config-prettier prettier
+
+# Adicionando o Jest
+
+yarn add -D jest @babel/preset-typescript @types/jest @testing-library/react @testing-library/jest-dom jest-environment-jsdom
+
+# Adicionando PWA
+
+yarn add next-pwa @next/bundle-analyzer

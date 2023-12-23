@@ -1,4 +1,18 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const withPWA = require('next-pwa');
+const isProd = process.env.NODE_ENV === "production";
+const withBundlerAnalizer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 
-module.exports = nextConfig
+
+const nextConfig = {
+  reactStrictMode:true,
+  swcMinify:true,
+  pwa: {
+    disable: !isProd,
+    dest: "public",
+  },
+}
+
+module.exports = withBundlerAnalizer(withPWA(nextConfig));
