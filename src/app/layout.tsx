@@ -1,6 +1,7 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 
-import './globals.css'
+import { Providers } from './providers';
+import { fonts } from './font';
 
 
 export const metadata: Metadata = {
@@ -14,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR">
-      <body>{children}</body>
+    <html lang="pt-BR" className={fonts.exo.variable}>
+      <Providers>{children}</Providers>
     </html>
   )
 }
